@@ -1,0 +1,27 @@
+# Configuration for Coupled SWE Advection-Diffusion Simulation
+
+input:
+  swe_pickle_path: "swe_data/virginia_key_result.pkl"
+  speed_multiplier: 2.0
+  speed_threshold: 0.1
+
+initial_condition:
+  central_x: -80.10
+  central_y: 25.75
+  buffer: 0.009  # ~1000m / 111111 deg/m
+  sigma: 1000.0  # meters
+  amplitude: 27.0
+
+pde_params:
+  diffusivity: 0.1
+  t_final_sim: 40000.0
+  dt_sim: 500.0
+  mesh_resolution: 30
+  element_degree: 1
+  element_family: "P"
+  are_coordinates_lonlat: true
+
+output:
+  output_dir: "coupled_simulations"
+  save_pkl_filename: "virginia_key_simulation_data.pkl"
+  create_solution_interpolator: true

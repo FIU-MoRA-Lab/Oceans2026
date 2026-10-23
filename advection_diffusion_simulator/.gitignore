@@ -1,0 +1,4 @@
+_*
+*.csv
+.mypy*
+data/*
